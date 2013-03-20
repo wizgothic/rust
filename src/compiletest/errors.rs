@@ -16,7 +16,7 @@ use core::str;
 
 pub struct ExpectedError { line: uint, kind: ~str, msg: ~str }
 
-// Load any test directives embedded in the file
+// Load any test directives embedded in the file--I should not change this part.
 pub fn load_errors(testfile: &Path) -> ~[ExpectedError] {
     let mut error_patterns = ~[];
     let rdr = io::file_reader(testfile).get();
